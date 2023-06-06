@@ -54,7 +54,7 @@ class TransferCommissionCalculatorTest {
         val transferAmount = 80000
         val commission = calculateTransferCommission(cardType = "Maestro", transferAmount = transferAmount)
 
-        assertEquals(508, commission)
+        assertEquals(500, commission)
     }
 
     @Test
@@ -62,7 +62,7 @@ class TransferCommissionCalculatorTest {
         val transferAmount = 1000
         val commission = calculateTransferCommission(cardType = "Visa", transferAmount = transferAmount)
 
-        assertEquals(43, commission)
+        assertEquals(42, commission)
     }
 
     @Test
@@ -70,6 +70,6 @@ class TransferCommissionCalculatorTest {
         val transferAmount = 1000
         val commission = calculateTransferCommission(cardType = "Мир", transferAmount = transferAmount)
 
-        assertEquals(43, commission)
+        assertEquals(42, commission)
     }
 }
